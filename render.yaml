@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: whatsapp-auto-reply-bot
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js > logs.txt 2>&1
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 18
